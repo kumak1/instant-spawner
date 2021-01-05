@@ -34,7 +34,8 @@ namespace InstantSpawner
             spawnParam = EditorGUILayout.ObjectField(
                 new GUIContent("Spawn Param"),
                 spawnParam,
-                typeof(SpawnParam)
+                typeof(SpawnParam),
+                false
             ) as SpawnParam;
 
             EditorUtil.DrawLine();
