@@ -9,7 +9,6 @@ namespace InstantSpawner.Model
         public GameObject prefab;
         public Vector3 position;
         public Vector3 rotate;
-        public Vector3 scale = Vector3.one;
         public bool useReplaceMaterial;
         public string targetObjectName;
         public int materialIndex;

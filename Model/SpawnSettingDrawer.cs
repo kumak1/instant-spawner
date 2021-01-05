@@ -19,7 +19,6 @@ namespace InstantSpawner.Model
             EditorGUI.indentLevel++;
             EditorUtil.Field(ref position, property, "Position", "position");
             EditorUtil.Field(ref position, property, "Rotate", "rotate");
-            EditorUtil.Field(ref position, property, "Scale", "scale");
             EditorGUI.indentLevel--;
 
             if (EditorUtil.CheckBoxField(ref position, property, "Replace Material Texture", "useReplaceMaterial"))
@@ -45,7 +44,6 @@ namespace InstantSpawner.Model
             height += EditorUtil.GetPropertyHeight();
             height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("position"));
             height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("rotate"));
-            height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("scale"));
 
             var useReplaceMaterial = property.FindPropertyRelative("useReplaceMaterial");
             height += EditorUtil.GetPropertyHeight(useReplaceMaterial);

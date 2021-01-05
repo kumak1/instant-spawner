@@ -62,11 +62,12 @@ namespace InstantSpawner
                 {
                     if (setting.prefab == null) continue;
 
-                    var obj = Instantiate(setting.prefab);
-                    obj.transform.parent = parent.transform;
-                    obj.transform.position = setting.position;
-                    obj.transform.rotation = Quaternion.Euler(setting.rotate);
-                    obj.transform.localScale = setting.scale;
+                    var obj = Instantiate(
+						setting.prefab,
+                        setting.position,
+                        Quaternion.Euler(setting.rotate),
+                        parent.transform
+					);
 
                     if (!setting.useReplaceMaterial) continue;
 
