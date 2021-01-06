@@ -10,8 +10,6 @@ namespace InstantSpawner.Model
         public Vector3 position;
         public Vector3 rotate;
         public bool useReplaceMaterial;
-        public string targetObjectName;
-        public int materialIndex;
-        public Texture2D texture;
+        public SpawnMaterial[] materialParams = {new SpawnMaterial(),};
     }
 }

@@ -24,9 +24,7 @@ namespace InstantSpawner.Model
             if (EditorUtil.CheckBoxField(ref position, property, "Replace Material Texture", "useReplaceMaterial"))
             {
                 EditorGUI.indentLevel++;
-                EditorUtil.Field(ref position, property, "Target Object Name", "targetObjectName");
-                EditorUtil.Field(ref position, property, "Material Index", "materialIndex");
-                EditorUtil.Field(ref position, property, "Texture", "texture");
+                EditorUtil.Field(ref position, property, "Material Params", "materialParams");
                 EditorGUI.indentLevel--;
             }
 
@@ -50,9 +48,7 @@ namespace InstantSpawner.Model
 
             if (useReplaceMaterial.boolValue)
             {
-                height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("targetObjectName"));
-                height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("materialIndex"));
-                height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("texture"));
+                height += EditorUtil.GetPropertyHeight(property.FindPropertyRelative("materialParams"));
             }
 
             return height;
